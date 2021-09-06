@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
+import 'package:travelapp/AppUiWidget/hotel.dart';
+import 'package:travelapp/AppUiWidget/hotel_locate.dart';
 import 'package:travelapp/AppUiWidget/location.dart';
 import 'package:travelapp/AppUiWidget/place_info.dart';
 import 'package:travelapp/AppUiWidget/profile.dart';
@@ -57,13 +60,38 @@ class HomeScreen extends StatelessWidget {
               ),
             ),
           ),
+          SizedBox(
+            height: 10,
+          ),
           Container(
-            margin: EdgeInsets.symmetric(vertical: 20.0),
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              children: [
-                Container(child: PlaceInfo()),
-              ],
+            margin: EdgeInsets.only(left: 24),
+            height: 270,
+            child: Expanded(
+              child: ListView.builder(
+                shrinkWrap: true,
+                scrollDirection: Axis.horizontal,
+                itemCount: 5,
+                itemBuilder: (BuildContext context, int index) => Card(
+                  shape: RoundedRectangleBorder(
+                    side: BorderSide(color: Colors.white, width: 1),
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                  child: Center(child: PlaceInfo()),
+                ),
+              ),
+            ),
+          ),
+          SizedBox(
+            height: 5,
+          ),
+          Container(
+            margin: EdgeInsets.only(left: 24),
+            child: Text(
+              'Nearest Places',
+              style: TextStyle(
+                fontSize: 20,
+                fontWeight: FontWeight.bold,
+              ),
             ),
           )
         ],
