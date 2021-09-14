@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:travelapp/AppUiWidget/hotel.dart';
-import 'package:travelapp/AppUiWidget/hotel_locate.dart';
+
 import 'package:travelapp/AppUiWidget/location.dart';
 import 'package:travelapp/AppUiWidget/place_info.dart';
 import 'package:travelapp/AppUiWidget/profile.dart';
@@ -93,7 +93,15 @@ class HomeScreen extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-          )
+          ),
+          SizedBox(
+            height: 5,
+          ),
+          Container(margin: EdgeInsets.only(left: 24), child: HotelTag()),
+          SizedBox(
+            height: 10,
+          ),
+          Container(margin: EdgeInsets.only(left: 24), child: HotelTag()),
         ],
       ),
     );
