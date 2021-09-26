@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:travelapp/AppUiWidget/hotel.dart';
-import 'package:travelapp/AppUiWidget/hotel_locate.dart';
+
 import 'package:travelapp/AppUiWidget/location.dart';
 import 'package:travelapp/AppUiWidget/place_info.dart';
 import 'package:travelapp/AppUiWidget/profile.dart';
