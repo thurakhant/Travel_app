@@ -7,7 +7,7 @@ class HotelTag extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 330,
+      width: 370,
       height: 85,
       decoration: BoxDecoration(
         color: Colors.white,
