@@ -7,7 +7,7 @@ class DetailLocation extends StatelessWidget {
       child: Container(
         padding: EdgeInsets.all(13),
         width: 380,
-        height: 520,
+        height: 510,
         decoration: BoxDecoration(
           image: DecorationImage(
             image: AssetImage('images/map.png'),

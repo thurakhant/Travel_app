@@ -17,7 +17,9 @@ class BackBtn extends StatelessWidget {
           margin: EdgeInsets.symmetric(horizontal: 5),
           child: IconButton(
             alignment: Alignment.center,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pop(context);
+            },
             icon: Icon(Icons.arrow_back_ios),
           ),
         ),

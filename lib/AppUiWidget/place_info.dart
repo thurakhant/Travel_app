@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:travelapp/screen/second_screen.dart';
 
 class PlaceInfo extends StatelessWidget {
   const PlaceInfo({Key? key}) : super(key: key);
@@ -100,7 +101,13 @@ class PlaceInfo extends StatelessWidget {
                             backgroundColor:
                                 MaterialStateProperty.all(Colors.white),
                           ),
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const SecondScreen()),
+                            );
+                          },
                           child: Text('Detail'),
                         ),
                       )

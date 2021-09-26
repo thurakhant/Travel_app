@@ -48,7 +48,7 @@ class HomeScreen extends StatelessWidget {
           ),
           SearchBar(),
           SizedBox(
-            height: 31,
+            height: 28,
           ),
           Container(
             margin: EdgeInsets.symmetric(horizontal: 24),
@@ -61,7 +61,7 @@ class HomeScreen extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 10,
+            height: 8,
           ),
           Container(
             margin: EdgeInsets.only(left: 24),
@@ -84,8 +84,8 @@ class HomeScreen extends StatelessWidget {
           SizedBox(
             height: 5,
           ),
-          Container(
-            margin: EdgeInsets.only(left: 24),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 10),
             child: Text(
               'Nearest Places',
               style: TextStyle(
@@ -93,7 +93,18 @@ class HomeScreen extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
-          )
+          ),
+          Container(
+            child: Expanded(
+              child: ListView.builder(
+                scrollDirection: Axis.vertical,
+                itemCount: 5,
+                itemBuilder: (BuildContext context, int index) {
+                  return HotelTag();
+                },
+              ),
+            ),
+          ),
         ],
       ),
     );

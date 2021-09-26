@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:travelapp/screen/third_screen.dart';
 
 class HotelTag extends StatelessWidget {
   const HotelTag({Key? key}) : super(key: key);
@@ -73,7 +74,14 @@ class HotelTag extends StatelessWidget {
                 ),
                 child: IconButton(
                   iconSize: 16,
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => const ThirdScreen(),
+                      ),
+                    );
+                  },
                   icon: Icon(Icons.arrow_forward_ios),
                 ),
               ),
